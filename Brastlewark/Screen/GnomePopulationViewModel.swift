@@ -29,8 +29,9 @@ class GnomePopulationViewModel: ObservableObject {
             decoder.keyDecodingStrategy = .convertFromSnakeCase
             
             if let decodedResponse = try? decoder.decode(Response.self, from: data) {
-                population = decodedResponse.Brastlewark
+                population = decodedResponse.Brastlewark.sorted(by: { $0.name < $1.name })
             }
+            
         } catch {
             print("Invalid data")
         }

@@ -9,16 +9,23 @@ import SwiftUI
 
 struct GnomePopulationView: View {
     @StateObject private var viewModel = GnomePopulationViewModel()
+    @State private var searchText = ""
     
     var body: some View {
         NavigationView{
-            List(viewModel.population, id: \.id) { gnome in
-                VStack{
-                    Text(gnome.name)
-                        .font(.headline)
+            VStack{
+                List(viewModel.population, id: \.id) { gnome in
+                    LazyVStack(alignment: .leading){
+                        NavigationLink {
+                            GnomeDetailView(gnome: gnome)
+                        } label: {
+                            GnomePopulationCellView(gnome: gnome)
+                        }
+                    }
                 }
             }
-            .task { await viewModel.loadData() }
+            .listStyle(.plain)
+            .task { await viewModel.loadData()}
             .refreshable { await viewModel.loadData() }
             .navigationTitle("Gnome Population")
         }
