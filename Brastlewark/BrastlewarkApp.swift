@@ -11,7 +11,7 @@ import SwiftUI
 struct BrastlewarkApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            GnomePopulationView()
         }
     }
 }
