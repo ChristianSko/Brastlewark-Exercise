@@ -42,8 +42,6 @@ class GnomePopulationViewModel: ObservableObject {
     }
     
     func search(with query: String = "") {
-        filteredPopulation = query.isEmpty ? population : population.filter({$0.professions.contains { element in
-            element == query
-        }})
+        filteredPopulation = query.isEmpty ? population : population.filter({$0.name.contains(query)})
     }
 }

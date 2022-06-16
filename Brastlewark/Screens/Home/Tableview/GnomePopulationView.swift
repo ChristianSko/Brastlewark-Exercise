@@ -25,7 +25,7 @@ struct GnomePopulationView: View {
                         }
                     }
                 }
-                .searchable(text: $query, prompt: "Search by Profession")
+                .searchable(text: $query, prompt: "Search by Name")
             }
             .navigationTitle(Words.tableviewTitle)
             .listStyle(.plain)
