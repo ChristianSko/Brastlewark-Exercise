@@ -13,9 +13,11 @@ class GnomePopulationViewModel: ObservableObject {
     enum State {
         case na
         case loading
-        case success(data: [Brastlewark])
+        case success
         case failed(error: Error)
     }
+    
+    @Published private(set) var state: State = .na
     
     private let service: GnomePopulationService
     
@@ -24,17 +26,24 @@ class GnomePopulationViewModel: ObservableObject {
     }
     
     @Published var population = [Brastlewark]()
-    @Published private(set) var state: State = .na
+    @Published var filteredPopulation = [Brastlewark]()
     
     func getGnomes() async {
         self.state = .loading
         
         do {
             let gnomes = try await service.fetchData()
-            self.state = .success(data: gnomes)
+            self.state = .success
             population = gnomes
+            filteredPopulation = gnomes
         } catch {
             self.state = .failed(error: error)
         }
+    }
+    
+    func search(with query: String = "") {
+        filteredPopulation = query.isEmpty ? population : population.filter({$0.professions.contains { element in
+            element == query
+        }})
     }
 }

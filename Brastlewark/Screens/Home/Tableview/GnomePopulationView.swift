@@ -9,12 +9,14 @@ import SwiftUI
 
 struct GnomePopulationView: View {
     @StateObject private var viewModel = GnomePopulationViewModel(service: GnomePopulationService())
-    @State private var searchText = ""
+    @State private var query = ""
+    
+    //TO DO: Apply View based on VM State
     
     var body: some View {
         NavigationView{
             VStack{
-                List(viewModel.population, id: \.id) { gnome in
+                List(viewModel.filteredPopulation, id: \.id) { gnome in
                     LazyVStack(alignment: .leading){
                         NavigationLink {
                             GnomeDetailView(gnome: gnome)
@@ -23,21 +25,16 @@ struct GnomePopulationView: View {
                         }
                     }
                 }
-                .searchable(text: $searchText)
+                .searchable(text: $query, prompt: "Search by Profession")
             }
-            .listStyle(.plain)
-            .task { await viewModel.getGnomes()}
-            .refreshable { await viewModel.getGnomes() }
             .navigationTitle(Words.tableviewTitle)
-            .onChange(of: searchText) { searchText in
-             
-                if !searchText.isEmpty {
-                    viewModel.population = viewModel.population.filter{ $0.professions.contains(searchText)}
-                } else {
-                    viewModel.population = viewModel.population.sorted(by: { $0.name < $1.name })
-                }
-            }
+            .listStyle(.plain)
             .background(Image(ImageName.grass))
+            .task { await viewModel.getGnomes()}
+            .refreshable { await viewModel.getGnomes()}
+            .onChange(of: query) { newQuery in
+                viewModel.search(with: newQuery)
+            }
         }
     }
 }
