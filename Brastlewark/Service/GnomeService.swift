@@ -37,13 +37,13 @@ struct GnomePopulationService {
             
             if let decodedResponse = try? decoder.decode(Response.self, from: data) {
                 return decodedResponse.Brastlewark.sorted(by: { $0.name < $1.name })
+            } else {
+                throw GnomePopulationServiceError.failedToDecode
             }
             
         } catch {
             throw GnomePopulationServiceError.invalidData
         }
-        
-        return []
     }
     
 }
