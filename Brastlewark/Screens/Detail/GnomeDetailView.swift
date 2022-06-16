@@ -18,8 +18,6 @@ struct GnomeDetailView: View {
                 .scaledToFit()
                 .clipShape(Circle())
                 .shadow(radius: 10)
-                .padding()
-            
             
             //TO DO: REFACTOR LIST WITH A FOREACH TO ITERATE ON ENUM
             
@@ -56,9 +54,10 @@ struct GnomeDetailView: View {
                     }
                 }
             }
+            .frame(height: 420)
             
         }
-        .background(Image(ImageName.grass).resizable().edgesIgnoringSafeArea(.top))
+        .background(Color(UIColor.systemGray6))
     }
 }
 

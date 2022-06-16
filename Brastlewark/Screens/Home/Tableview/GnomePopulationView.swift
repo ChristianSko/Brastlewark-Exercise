@@ -22,6 +22,7 @@ struct GnomePopulationView: View {
                             GnomeDetailView(gnome: gnome)
                         } label: {
                             GnomePopulationCellView(gnome: gnome)
+                                .frame(height: 110)
                         }
                     }
                 }
@@ -29,7 +30,6 @@ struct GnomePopulationView: View {
             }
             .navigationTitle(Words.tableviewTitle)
             .listStyle(.plain)
-            .background(Image(ImageName.grass))
             .task { await viewModel.getGnomes()}
             .refreshable { await viewModel.getGnomes()}
             .onChange(of: query) { newQuery in

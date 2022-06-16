@@ -25,7 +25,6 @@
 		7E551034285A5CD10071FC8B /* CellViewLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E551033285A5CD10071FC8B /* CellViewLabels.swift */; };
 		7E55103A285B29320071FC8B /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E551039285B29320071FC8B /* Int+Extensions.swift */; };
 		7E55103C285B2CD20071FC8B /* String+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E55103B285B2CD20071FC8B /* String+Constants.swift */; };
-		7E55103E285B52E70071FC8B /* GnomePopulationViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E55103D285B52E70071FC8B /* GnomePopulationViewModelTest.swift */; };
 		7E551041285B64AD0071FC8B /* GnomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E551040285B64AC0071FC8B /* GnomeService.swift */; };
 /* End PBXBuildFile section */
 
@@ -69,7 +68,6 @@
 		7E551033285A5CD10071FC8B /* CellViewLabels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewLabels.swift; sourceTree = "<group>"; };
 		7E551039285B29320071FC8B /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
 		7E55103B285B2CD20071FC8B /* String+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Constants.swift"; sourceTree = "<group>"; };
-		7E55103D285B52E70071FC8B /* GnomePopulationViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GnomePopulationViewModelTest.swift; sourceTree = "<group>"; };
 		7E551040285B64AC0071FC8B /* GnomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GnomeService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,6 +125,7 @@
 				7E0272C5285A0D93005D5C11 /* Utilities */,
 				7E0272BD2859BF41005D5C11 /* Screens */,
 				7E0272BA2858CB48005D5C11 /* Model */,
+				7EEB8212285BE18B00EE664B /* ViewModel */,
 				7E0272942858CAFF005D5C11 /* Assets.xcassets */,
 				7E0272962858CAFF005D5C11 /* Preview Content */,
 			);
@@ -145,7 +144,6 @@
 			isa = PBXGroup;
 			children = (
 				7E0272A12858CB00005D5C11 /* BrastlewarkTests.swift */,
-				7E55103D285B52E70071FC8B /* GnomePopulationViewModelTest.swift */,
 			);
 			path = BrastlewarkTests;
 			sourceTree = "<group>";
@@ -207,7 +205,6 @@
 		7E551037285A5D390071FC8B /* Tableview */ = {
 			isa = PBXGroup;
 			children = (
-				7E0272C02859BFB4005D5C11 /* GnomePopulationViewModel.swift */,
 				7E0272BE2859BF59005D5C11 /* GnomePopulationView.swift */,
 			);
 			path = Tableview;
@@ -230,6 +227,14 @@
 				7E551040285B64AC0071FC8B /* GnomeService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		7EEB8212285BE18B00EE664B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7E0272C02859BFB4005D5C11 /* GnomePopulationViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -383,7 +388,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E55103E285B52E70071FC8B /* GnomePopulationViewModelTest.swift in Sources */,
 				7E0272A22858CB00005D5C11 /* BrastlewarkTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

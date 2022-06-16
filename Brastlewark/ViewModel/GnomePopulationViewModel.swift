@@ -19,7 +19,7 @@ class GnomePopulationViewModel: ObservableObject {
     
     @Published private(set) var state: State = .na
     
-    private let service: GnomePopulationService
+    let service: GnomePopulationService
     
     init(service: GnomePopulationService) {
         self.service = service
