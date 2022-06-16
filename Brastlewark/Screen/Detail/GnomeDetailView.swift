@@ -18,8 +18,11 @@ struct GnomeDetailView: View {
                 .scaledToFit()
                 .frame(width: .infinity)
                 .clipShape(RoundedRectangle(cornerRadius: 25,
-                                            style: .continuous))
+                                                style: .continuous))
                 .padding()
+            
+            
+            //TO DO: REFACTOR LIST WITH A FOREACH TO ITERATE ON ENUM
             
             List {
                 Section(header: Text("Name")) {
@@ -61,7 +64,7 @@ struct GnomeDetailView: View {
 
 struct GnomeDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        GnomeDetailView(gnome: MockData.testGnome2)
+        GnomeDetailView(gnome: MockData.testGnome1)
     }
 }
 

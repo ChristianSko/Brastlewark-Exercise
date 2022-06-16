@@ -18,16 +18,8 @@ struct GnomePopulationCellView: View {
                        height: 100)
                 .clipShape(Circle())
                 .shadow(radius: 10)
-            
-            VStack{
-                Text(gnome.name)
-                    .font(.headline)
-                
-                Text("Main job: \(gnome.professions.first ?? "Unemployed")")
-                    .font(.body)
-                
-                Text("Total jobs: \(gnome.professions.count)")
-            }
+    
+            CellViewLabels(gnome: gnome)
         }
     }
 }

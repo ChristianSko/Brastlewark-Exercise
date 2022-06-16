@@ -21,5 +21,11 @@ struct Brastlewark: Codable, Identifiable {
     let hairColor: String
     let professions : [String]
     let friends: [String]
+    
+    enum CodingKeys: String, CodingKey {
+        case id, name, thumbnail, age, weight, height
+        case hairColor = "hair_color"
+        case professions, friends
+    }
 }
 
