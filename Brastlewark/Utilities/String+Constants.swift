@@ -15,7 +15,7 @@ enum ImageName {
 }
 
 enum Words  {
-    static let tableviewTitle = "Gnopulation"
+    static let tableviewTitle = "GnoPulation"
     static let moreProfessions = "More Professions"
     static let splashWelcome =  "GNOPE TODAY!"
    

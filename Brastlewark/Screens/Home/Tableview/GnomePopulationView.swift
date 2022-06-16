@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct GnomePopulationView: View {
-    @StateObject private var viewModel = GnomePopulationViewModel()
+    @StateObject private var viewModel = GnomePopulationViewModel(service: GnomePopulationService())
     @State private var searchText = ""
     
     var body: some View {
@@ -26,15 +26,15 @@ struct GnomePopulationView: View {
                 .searchable(text: $searchText)
             }
             .listStyle(.plain)
-            .task { await viewModel.loadData()}
-            .refreshable { await viewModel.loadData() }
+            .task { await viewModel.getGnomes()}
+            .refreshable { await viewModel.getGnomes() }
             .navigationTitle(Words.tableviewTitle)
             .onChange(of: searchText) { searchText in
              
                 if !searchText.isEmpty {
                     viewModel.population = viewModel.population.filter{ $0.professions.contains(searchText)}
                 } else {
-                    viewModel.population = viewModel.population
+                    viewModel.population = viewModel.population.sorted(by: { $0.name < $1.name })
                 }
             }
             .background(Image(ImageName.grass))

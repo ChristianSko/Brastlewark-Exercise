@@ -25,6 +25,8 @@
 		7E551034285A5CD10071FC8B /* CellViewLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E551033285A5CD10071FC8B /* CellViewLabels.swift */; };
 		7E55103A285B29320071FC8B /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E551039285B29320071FC8B /* Int+Extensions.swift */; };
 		7E55103C285B2CD20071FC8B /* String+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E55103B285B2CD20071FC8B /* String+Constants.swift */; };
+		7E55103E285B52E70071FC8B /* GnomePopulationViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E55103D285B52E70071FC8B /* GnomePopulationViewModelTest.swift */; };
+		7E551041285B64AD0071FC8B /* GnomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E551040285B64AC0071FC8B /* GnomeService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		7E551033285A5CD10071FC8B /* CellViewLabels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewLabels.swift; sourceTree = "<group>"; };
 		7E551039285B29320071FC8B /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
 		7E55103B285B2CD20071FC8B /* String+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Constants.swift"; sourceTree = "<group>"; };
+		7E55103D285B52E70071FC8B /* GnomePopulationViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GnomePopulationViewModelTest.swift; sourceTree = "<group>"; };
+		7E551040285B64AC0071FC8B /* GnomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GnomeService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,8 +123,9 @@
 			children = (
 				7E0272C22859FB3B005D5C11 /* Info.plist */,
 				7E0272902858CAFE005D5C11 /* BrastlewarkApp.swift */,
+				7E55103F285B647A0071FC8B /* Service */,
 				7E0272C5285A0D93005D5C11 /* Utilities */,
-				7E0272BD2859BF41005D5C11 /* Screen */,
+				7E0272BD2859BF41005D5C11 /* Screens */,
 				7E0272BA2858CB48005D5C11 /* Model */,
 				7E0272942858CAFF005D5C11 /* Assets.xcassets */,
 				7E0272962858CAFF005D5C11 /* Preview Content */,
@@ -140,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				7E0272A12858CB00005D5C11 /* BrastlewarkTests.swift */,
+				7E55103D285B52E70071FC8B /* GnomePopulationViewModelTest.swift */,
 			);
 			path = BrastlewarkTests;
 			sourceTree = "<group>";
@@ -162,13 +168,13 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		7E0272BD2859BF41005D5C11 /* Screen */ = {
+		7E0272BD2859BF41005D5C11 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
 				7E551035285A5D050071FC8B /* Home */,
 				7E551036285A5D220071FC8B /* Detail */,
 			);
-			path = Screen;
+			path = Screens;
 			sourceTree = "<group>";
 		};
 		7E0272C5285A0D93005D5C11 /* Utilities */ = {
@@ -216,6 +222,14 @@
 				7E551033285A5CD10071FC8B /* CellViewLabels.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		7E55103F285B647A0071FC8B /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				7E551040285B64AC0071FC8B /* GnomeService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -352,6 +366,7 @@
 				7E0272CB285A1CD5005D5C11 /* SplashView.swift in Sources */,
 				7E0272BF2859BF59005D5C11 /* GnomePopulationView.swift in Sources */,
 				7E0272D0285A3A9A005D5C11 /* GnomePopulationCellView.swift in Sources */,
+				7E551041285B64AD0071FC8B /* GnomeService.swift in Sources */,
 				7E0272912858CAFE005D5C11 /* BrastlewarkApp.swift in Sources */,
 				7E0272C4285A0BDB005D5C11 /* GnomeDetailView.swift in Sources */,
 				7E0272C7285A1414005D5C11 /* ThumbnailImageView.swift in Sources */,
@@ -368,6 +383,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E55103E285B52E70071FC8B /* GnomePopulationViewModelTest.swift in Sources */,
 				7E0272A22858CB00005D5C11 /* BrastlewarkTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
