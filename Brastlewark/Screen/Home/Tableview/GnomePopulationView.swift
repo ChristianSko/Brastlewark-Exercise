@@ -23,11 +23,21 @@ struct GnomePopulationView: View {
                         }
                     }
                 }
+                .searchable(text: $searchText)
             }
             .listStyle(.plain)
             .task { await viewModel.loadData()}
             .refreshable { await viewModel.loadData() }
-            .navigationTitle("Gnome Population")
+            .navigationTitle(Words.tableviewTitle)
+            .onChange(of: searchText) { searchText in
+             
+                if !searchText.isEmpty {
+                    viewModel.population = viewModel.population.filter{ $0.professions.contains(searchText)}
+                } else {
+                    viewModel.population = viewModel.population
+                }
+            }
+            .background(Image(ImageName.grass))
         }
     }
 }

@@ -12,19 +12,20 @@ struct CellViewLabels: View {
     let gnome: Brastlewark
     
     var body: some View {
-        VStack(alignment: .center){
+        VStack(alignment: .center, spacing: 10){
             
             Text(gnome.name)
                 .font(.headline)
-            
-            Label("Professions", systemImage: "\(gnome.professions.count).circle")
-                .labelStyle(.titleAndIcon)
             
             Text("\(gnome.professions.first ?? "Unemployed")")
                 .padding(.horizontal)
                 .font(.body)
                 .background(.green)
                 .clipShape(Capsule())
+            
+            Label("More Professions", systemImage: "\(gnome.professions.count.decreaseCount).circle")
+                .labelStyle(.titleAndIcon)
+            
         }
     }
 }

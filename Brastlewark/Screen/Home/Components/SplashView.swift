@@ -12,13 +12,13 @@ struct SplashView: View {
     var body: some View {
         
         ZStack {
-            Image("gnome-splash")
+            Image(ImageName.splash)
                 .resizable()
                 .scaledToFill()
                 .edgesIgnoringSafeArea(.all)
             
             VStack {
-                Text("GNOPE TODAY!")
+                Text(Words.splashWelcome)
                     .font(.title)
                     .fontWeight(.black)
                     .foregroundColor(.green)

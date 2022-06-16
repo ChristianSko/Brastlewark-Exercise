@@ -16,42 +16,41 @@ struct GnomeDetailView: View {
         VStack{
             ThumbnailImageView(imageURLString: gnome.thumbnail)
                 .scaledToFit()
-                .frame(width: .infinity)
-                .clipShape(RoundedRectangle(cornerRadius: 25,
-                                                style: .continuous))
+                .clipShape(Circle())
+                .shadow(radius: 10)
                 .padding()
             
             
             //TO DO: REFACTOR LIST WITH A FOREACH TO ITERATE ON ENUM
             
             List {
-                Section(header: Text("Name")) {
+                Section(header: Text(GnomeDescriptor.name.rawValue)) {
                     Text(gnome.name)
                 }
                 
-                Section(header: Text("Height")) {
-                    Text("\(gnome.height, specifier: "%.2f")")
+                Section(header: Text(GnomeDescriptor.height.rawValue)) {
+                    Text("\(gnome.height, specifier: "%.2f") cm")
                 }
                 
-                Section(header: Text("Weight")) {
-                    Text("\(gnome.weight, specifier: "%.2f")")
+                Section(header: Text(GnomeDescriptor.weight.rawValue)) {
+                    Text("\(gnome.weight, specifier: "%.2f") kg")
                 }
                 
-                Section(header: Text("Age")) {
-                    Text("\(gnome.age)")
+                Section(header: Text(GnomeDescriptor.age.rawValue)) {
+                    Text("\(gnome.age) years")
                 }
                 
-                Section(header: Text("Hair Color")) {
+                Section(header: Text(GnomeDescriptor.hairColor.rawValue)) {
                     Text("\(gnome.hairColor)")
                 }
                 
-                Section(header: Text("Professions")) {
+                Section(header: Text(GnomeDescriptor.professions.rawValue)) {
                     ForEach(gnome.professions, id: \.self) { job in
                         Text(job)
                     }
                 }
                 
-                Section(header: Text("Friends")) {
+                Section(header: Text(GnomeDescriptor.friends.rawValue)) {
                     ForEach(gnome.friends, id: \.self) { friend in
                         Text(friend)
                     }
@@ -59,6 +58,7 @@ struct GnomeDetailView: View {
             }
             
         }
+        .background(Image(ImageName.grass).resizable().edgesIgnoringSafeArea(.top))
     }
 }
 
