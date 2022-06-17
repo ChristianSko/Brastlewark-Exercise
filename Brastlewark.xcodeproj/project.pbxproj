@@ -58,7 +58,6 @@
 		7E0272BB2858CB61005D5C11 /* Brastlewark .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Brastlewark .swift"; sourceTree = "<group>"; };
 		7E0272BE2859BF59005D5C11 /* GnomePopulationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GnomePopulationView.swift; sourceTree = "<group>"; };
 		7E0272C02859BFB4005D5C11 /* GnomePopulationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GnomePopulationViewModel.swift; sourceTree = "<group>"; };
-		7E0272C22859FB3B005D5C11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		7E0272C3285A0BDB005D5C11 /* GnomeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GnomeDetailView.swift; sourceTree = "<group>"; };
 		7E0272C6285A1414005D5C11 /* ThumbnailImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailImageView.swift; sourceTree = "<group>"; };
 		7E0272C8285A1753005D5C11 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
@@ -69,6 +68,7 @@
 		7E551039285B29320071FC8B /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
 		7E55103B285B2CD20071FC8B /* String+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Constants.swift"; sourceTree = "<group>"; };
 		7E551040285B64AC0071FC8B /* GnomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GnomeService.swift; sourceTree = "<group>"; };
+		7E7368D7285CA6B5003ECB95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,7 +119,6 @@
 		7E02728F2858CAFE005D5C11 /* Brastlewark */ = {
 			isa = PBXGroup;
 			children = (
-				7E0272C22859FB3B005D5C11 /* Info.plist */,
 				7E0272902858CAFE005D5C11 /* BrastlewarkApp.swift */,
 				7E55103F285B647A0071FC8B /* Service */,
 				7E0272C5285A0D93005D5C11 /* Utilities */,
@@ -127,6 +126,7 @@
 				7E0272BA2858CB48005D5C11 /* Model */,
 				7EEB8212285BE18B00EE664B /* ViewModel */,
 				7E0272942858CAFF005D5C11 /* Assets.xcassets */,
+				7E7368D7285CA6B5003ECB95 /* Info.plist */,
 				7E0272962858CAFF005D5C11 /* Preview Content */,
 			);
 			path = Brastlewark;
